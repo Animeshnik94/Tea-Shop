@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- СЛАЙДЕР С БЕСТСЕЛЛЕРАМИ -->
+<a href="#">
+    <div class="new_year" style="background-image: url('/static/deps/images/new_year.jpg');">
+        <div class="new_year-overlay">
+            <div class="new_year-text">
+                <h1>Новогодняя акция!</h1>
+                <p>Покупайте определенные сорта чая со скидкой!</p>
+            </div>
+        </div>
+    </div>
+</a>
+<div class="container">
+    <div class="important_information text-center">
+        <h1>Лидеры продаж</h1>
+    </div>
+
+    <div class="container mt-5">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-12 col-md-4 d-block">
+                            <div class="card">
+                                <img src="{% static "deps/images/goods/img1.jpg"%}" class="card-img-top" alt="Название товара">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Черный чай</h5>
+                                    <p class="card-text">Чай из британии</p>
+                                    <p class="card-text"><strong>Цена: $9.99</strong></p>
+                                    <a href="#" class="btn btn-primary">Добавить в корзину</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-none d-md-block">
+                            <div class="card">
+                                <img src="{% static "deps/images/goods/img2.jpg"%}" class="card-img-top" alt="Название товара">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Зеленый чай</h5>
+                                    <p class="card-text">Вкусный зеленый чай из японии</p>
+                                    <p class="card-text"><strong>Цена: $19.99</strong></p>
+                                    <a href="#" class="btn btn-primary">Добавить в корзину</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-none d-md-block">
+                            <div class="card">
+                                <img src="{% static "deps/images/goods/img3.jpg"%}" class="card-img-top" alt="Название товара">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Травяной чай</h5>
+                                    <p class="card-text">Чай с дикими травами</p>
+                                    <p class="card-text"><strong>Цена: $14.99</strong></p>
+                                    <a href="#" class="btn btn-primary">Добавить в корзину</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Назад</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Вперед</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- О ПОЛЬЗЕ ЧАЯ -->
+<div class="healthy_tea">
+    <div class="container mt-5">
+        <div class="important_information text-center">
+            <h1>О пользе чая</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card-body text-center">
+                    <i class="fas fa-leaf fa-3x mb-3"></i>
+                    <h5 class="features-title">Поддержка иммунной системы</h5>
+                    <p class="card-text">Чай богат антиоксидантами, которые помогают укреплять иммунитет и защищают организм от заболеваний.</p>
+                </div>
+            </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-heart fa-3x mb-3"></i>
+                        <h5 class="features-title">Здоровье сердца</h5>
+                        <p class="card-text">Регулярное употребление чая может снизить риск сердечно-сосудистых заболеваний благодаря улучшению кровообращения и снижению уровня холестерина.</p>
+                    </div>
+                </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card-body text-center">
+                    <i class="fas fa-balance-scale fa-3x mb-3"></i>
+                    <h5 class="features-title">Улучшение пищеварения</h5>
+                    <p class="card-text">Чай, особенно травяной, может помочь улучшить пищеварительные процессы и уменьшить дискомфорт в животе.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+{% endblock %}
