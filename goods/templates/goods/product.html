@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-5"> <!-- Измените ширину по вашему усмотрению -->
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Товар 1">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 1</h5>
+                    <p class="card-text">Описание товара 1. Это подробное описание, которое может содержать всю необходимую информацию о товаре.</p>
+                    <p class="card-text"><strong>Цена: \\$10.00</strong></p>
+                    <a href="#" class="btn btn-primary">Добавить в корзину</a>
+                    <a href="#" class="btn btn-secondary">Посмотреть отзывы</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

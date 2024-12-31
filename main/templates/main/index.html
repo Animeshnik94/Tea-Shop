@@ -27,10 +27,14 @@
                             <div class="card">
                                 <img src="{% static "deps/images/goods/img1.jpg"%}" class="card-img-top" alt="Название товара">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Черный чай</h5>
+                                    <h5 class="card-title">
+                                        <a href="{% url 'catalog:product' %}">Черный чай</a>
+                                    </h5>
                                     <p class="card-text">Чай из британии</p>
                                     <p class="card-text"><strong>Цена: $9.99</strong></p>
-                                    <a href="#" class="btn btn-primary">Добавить в корзину</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="fas fa-shopping-cart"></i> <!-- Используйте Font Awesome для иконки -->
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -38,10 +42,14 @@
                             <div class="card">
                                 <img src="{% static "deps/images/goods/img2.jpg"%}" class="card-img-top" alt="Название товара">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Зеленый чай</h5>
+                                    <h5 class="card-title">
+                                        <a href="{% url 'catalog:product' %}">Зеленый чай</a>
+                                    </h5>
                                     <p class="card-text">Вкусный зеленый чай из японии</p>
                                     <p class="card-text"><strong>Цена: $19.99</strong></p>
-                                    <a href="#" class="btn btn-primary">Добавить в корзину</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="fas fa-shopping-cart"></i> 
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -49,10 +57,14 @@
                             <div class="card">
                                 <img src="{% static "deps/images/goods/img3.jpg"%}" class="card-img-top" alt="Название товара">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Травяной чай</h5>
+                                    <h5 class="card-title">
+                                        <a href="{% url 'catalog:product' %}">Травяной чай</a>
+                                    </h5>
                                     <p class="card-text">Чай с дикими травами</p>
                                     <p class="card-text"><strong>Цена: $14.99</strong></p>
-                                    <a href="#" class="btn btn-primary">Добавить в корзину</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="fas fa-shopping-cart"></i> 
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -101,4 +113,81 @@
         </div>
     </div>
 </div> 
+
+<!-- ВИДЫ ЧАЯ -->
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 important_information">Виды чая</h2>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+                <img src="{% static 'deps/images/types_of_tea/green.jpg' %}" class="card-img" alt="Зеленый чай" style="height: 200px; object-fit: cover;">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-white">Зеленый чай</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-4">
+            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+                <img src="{% static 'deps/images/types_of_tea/black.jpg' %}" class="card-img" alt="Чёрный чай" style="height: 200px; object-fit: cover;">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-white">Чёрный чай</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-4">
+            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+                <img src="{% static 'deps/images/types_of_tea/weed.jpg' %}" class="card-img" alt="Травяной чай" style="height: 200px; object-fit: cover;">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-white">Травяной чай</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-4">
+            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+                <img src="{% static 'deps/images/types_of_tea/oolong.jpeg' %}" class="card-img" alt="Улун" style="height: 200px; object-fit: cover;">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-white">Улун</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+                <img src="{% static 'deps/images/types_of_tea/white.jpg' %}" class="card-img" alt="Белый чай" style="height: 200px; object-fit: cover;">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-white">Белый чай</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-4">
+            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+                <img src="{% static 'deps/images/types_of_tea/puer.jpg' %}" class="card-img" alt="Пуэр" style="height: 200px; object-fit: cover;">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-white">Пуэр</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-4">
+            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+                <img src="{% static 'deps/images/types_of_tea/roybush.jpg' %}" class="card-img" alt="Ройбуш" style="height: 200px; object-fit: cover;">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-white">Ройбуш</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-4">
+            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+                <img src="{% static 'deps/images/types_of_tea/matcha.jpg' %}" class="card-img" alt="Матча" style="height: 200px; object-fit: cover;">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-white">Матча</h5>
+                </div>   
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
 {% endblock %}
