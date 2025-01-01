@@ -3,16 +3,11 @@ from django.http import HttpResponse
 
 
 def catalog(request) -> HttpResponse:
+
+    
     context: dict = {
         'title': 'Tea Shop-Каталог',
         'goods': [
-            {
-                'image' : 'deps/images/goods/boshki.jpg',
-                'name' : 'Чай убойный',
-                'description': 'Не совсем чай. Убойная тема',
-                'id' : 11111,
-                'price': 20.00
-            },
             {
                 'image': 'deps/images/goods/boshki.jpg',
                 'name': 'Зеленый чай',

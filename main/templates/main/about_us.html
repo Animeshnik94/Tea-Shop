@@ -2,9 +2,27 @@
 {% load static %}
 
 {% block content %}
-    <div class="text-center">
+    <div class="container mt-5">
+        <div class="text-center">
         
-        <h1 style='font-family: "Great Vibes", serif; font-size: 42px; color: red;'>{{content}}</h1>
+            <h1 style='font-family: "Great Vibes", serif; font-size: 42px; color: red;'>{{content}}</h1>
+    
+        </div>
 
+        
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Наши товары
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                {% for category in categories %}
+                    <li><a class="dropdown-item" href="{% url 'goods:index'%}">{{category.name}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        
     </div>
+
+
 {% endblock %}

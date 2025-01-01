@@ -1,0 +1,226 @@
+[
+    {
+        "model": "goods.products",
+        "pk": 1,
+        "fields": {
+            "name": "Зеленый чай \"Классик\"",
+            "slug": "zelenyj-chaj-klassik",
+            "description": "Натуральный зеленый чай с легким вкусом",
+            "image": "",
+            "price": "15.00",
+            "discount": "0.00",
+            "quantity": 143,
+            "category": 5
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 2,
+        "fields": {
+            "name": "Британский",
+            "slug": "britanskij",
+            "description": "Классический черный чай с насыщенным вкусом.",
+            "image": "",
+            "price": "18.00",
+            "discount": "0.00",
+            "quantity": 872,
+            "category": 6
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 3,
+        "fields": {
+            "name": "Деревенский чай",
+            "slug": "derevenskij-chaj",
+            "description": "Чай из различных трав для расслабления.",
+            "image": "",
+            "price": "22.00",
+            "discount": "0.00",
+            "quantity": 453,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 4,
+        "fields": {
+            "name": "Улун \"Классик\"",
+            "slug": "ulun-klassik",
+            "description": "Полуферментированный чай с уникальным вкусом.",
+            "image": "",
+            "price": "25.00",
+            "discount": "0.00",
+            "quantity": 89,
+            "category": 8
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 5,
+        "fields": {
+            "name": "Белый чай",
+            "slug": "belyj-chaj",
+            "description": "Нежный чай с легким цветочным ароматом.",
+            "image": "",
+            "price": "30.00",
+            "discount": "0.00",
+            "quantity": 231,
+            "category": 9
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 6,
+        "fields": {
+            "name": "Да хун пао",
+            "slug": "da-hun-pao",
+            "description": "Ферментированный чай с глубоким вкусом.",
+            "image": "",
+            "price": "35.00",
+            "discount": "0.00",
+            "quantity": 465,
+            "category": 10
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 7,
+        "fields": {
+            "name": "Эрл грей",
+            "slug": "erl-grej",
+            "description": "Черный чай с бергамотом.",
+            "image": "",
+            "price": "20.00",
+            "discount": "0.00",
+            "quantity": 732,
+            "category": 6
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 8,
+        "fields": {
+            "name": "Матча",
+            "slug": "matcha",
+            "description": "Порошковый зеленый чай с ярким вкусом.",
+            "image": "",
+            "price": "40.00",
+            "discount": "0.00",
+            "quantity": 555,
+            "category": 12
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 9,
+        "fields": {
+            "name": "Чай масала",
+            "slug": "chaj-masala",
+            "description": "Ароматный индийский чай с пряностями.",
+            "image": "",
+            "price": "28.00",
+            "discount": "0.00",
+            "quantity": 289,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 10,
+        "fields": {
+            "name": "Имбирный чай",
+            "slug": "imbirnyj-chaj",
+            "description": "Чай с добавлением свежего имбиря.",
+            "image": "",
+            "price": "18.00",
+            "discount": "0.00",
+            "quantity": 184,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 11,
+        "fields": {
+            "name": "Ромашковый чай",
+            "slug": "romashkovyj-chaj",
+            "description": "Успокаивающий чай из ромашки.",
+            "image": "",
+            "price": "15.00",
+            "discount": "0.00",
+            "quantity": 85,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 12,
+        "fields": {
+            "name": "Мятный чай",
+            "slug": "myatnyj-chaj",
+            "description": "Чай с освежающим мятным вкусом",
+            "image": "",
+            "price": "17.00",
+            "discount": "0.00",
+            "quantity": 101,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 13,
+        "fields": {
+            "name": "Белый пион",
+            "slug": "belyj-pion",
+            "description": "Нежный белый чай с легким вкусом.",
+            "image": "",
+            "price": "32.00",
+            "discount": "0.00",
+            "quantity": 165,
+            "category": 9
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 14,
+        "fields": {
+            "name": "Драконий колодец",
+            "slug": "drakonij-kolodec",
+            "description": "Классический китайский зеленый чай.",
+            "image": "",
+            "price": "45.00",
+            "discount": "0.00",
+            "quantity": 534,
+            "category": 5
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 15,
+        "fields": {
+            "name": "Чай в пакетиках черный",
+            "slug": "chaj-v-paketikah-chernyj",
+            "description": "Удобный чай в пакетиках для быстрого заваривания.",
+            "image": "",
+            "price": "10.00",
+            "discount": "0.00",
+            "quantity": 1053,
+            "category": 6
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 16,
+        "fields": {
+            "name": "Чай с тимьяном",
+            "slug": "chaj-s-timyanom",
+            "description": "Чай с добавлением тимьяна для аромата.",
+            "image": "",
+            "price": "23.00",
+            "discount": "0.00",
+            "quantity": 187,
+            "category": 7
+        }
+    }
+]
