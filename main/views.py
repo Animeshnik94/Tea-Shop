@@ -4,8 +4,6 @@ from django.http import HttpResponse
 from goods.models import Categories
 
 def index(request) -> HttpResponse:
-
-
     context: dict[str, str] = {
         'title' :'Tea Shop - Главная',
         'content' : 'Заходи в мой кишлак - будешь жирный как ишак',

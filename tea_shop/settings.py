@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Extensoins
+    'debug_toolbar',
     # my apps 
     'main',
     'goods',
+    
 ]
 
 MIDDLEWARE = [
@@ -54,6 +57,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    #Extensions
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'tea_shop.urls'
@@ -119,13 +125,25 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files (CSS, JavaScript)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS: list[Path] = [
     BASE_DIR / 'static'
+]
+
+# Медиафайлы, должны храниться отдельно. (images, контентная информация)
+
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# Internal_IPS нужно для расширения debug_toolbar
+
+INTERNAL_IPS = [
+    "127.0.0.1",
 ]
 
 # Default primary key field type
