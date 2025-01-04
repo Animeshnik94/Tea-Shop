@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load goods_tags %}
 
 {% block content %}
     <div class="container mt-5">
@@ -15,6 +16,7 @@
                 Наши товары
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                {% tag_categories as categories %} {% comment %} Шаблонные теги позваоляют обходить контроллеры и не перегружать их {% endcomment %}
                 {% for category in categories %}
                     <li><a class="dropdown-item" href="{% url 'goods:index'%}">{{category.name}}</a></li>
                 {% endfor %}
