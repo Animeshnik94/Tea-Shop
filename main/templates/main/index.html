@@ -37,9 +37,11 @@
                                             <img src="{% static "deps/images/Image-not-found.png" %}" class="card-img-top" alt="page not found" style="height: 200px; object-fit: cover;"> 
                                         {% endif %}
                                     </a>
-                                    <div class="discount-badge position-absolute" style="top: 10px; right: 10px; background-color: black; color: white; padding: 5px; border-radius: 5px;">
-                                        -{{ product.discount }}% <!-- Предполагается, что 'discount' — это атрибут вашего продукта -->
-                                    </div>
+                                    {% if product.discount %}
+                                        <div class="discount-badge position-absolute" style="top: 10px; right: 10px; background-color: black; color: white; padding: 5px; border-radius: 5px;">
+                                            -{{ product.discount }}% <!-- Предполагается, что 'discount' — это атрибут вашего продукта -->
+                                        </div>
+                                    {% endif %}
                                     <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">
                                             <a href="{% url 'catalog:product' product.slug %}">{{ product.name }}</a>
@@ -120,7 +122,7 @@
     <h2 class="text-center mb-4 important_information">Виды чая</h2>
     <div class="row">
         <div class="col-md-3 mb-4">
-            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+            <a href="{% url "catalog:index" categories_slug.5 %}" class="card" style="width: 100%; height: 200px;">
                 <img src="{% static 'deps/images/types_of_tea/green.jpg' %}" class="card-img" alt="Зеленый чай" style="height: 200px; object-fit: cover;">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
                     <h5 class="card-title text-white">Зеленый чай</h5>
@@ -128,7 +130,7 @@
             </a>
         </div>
         <div class="col-md-3 mb-4">
-            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+            <a href="{% url "catalog:index" categories_slug.6 %}" class="card" style="width: 100%; height: 200px;">
                 <img src="{% static 'deps/images/types_of_tea/black.jpg' %}" class="card-img" alt="Чёрный чай" style="height: 200px; object-fit: cover;">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
                     <h5 class="card-title text-white">Чёрный чай</h5>
@@ -136,7 +138,7 @@
             </a>
         </div>
         <div class="col-md-3 mb-4">
-            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+            <a href="{% url "catalog:index" categories_slug.7 %}" class="card" style="width: 100%; height: 200px;">
                 <img src="{% static 'deps/images/types_of_tea/weed.jpg' %}" class="card-img" alt="Травяной чай" style="height: 200px; object-fit: cover;">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
                     <h5 class="card-title text-white">Травяной чай</h5>
@@ -144,7 +146,7 @@
             </a>
         </div>
         <div class="col-md-3 mb-4">
-            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+            <a href="{% url "catalog:index" categories_slug.8 %}" class="card" style="width: 100%; height: 200px;">
                 <img src="{% static 'deps/images/types_of_tea/oolong.jpeg' %}" class="card-img" alt="Улун" style="height: 200px; object-fit: cover;">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
                     <h5 class="card-title text-white">Улун</h5>
@@ -154,7 +156,7 @@
     </div>
     <div class="row">
         <div class="col-md-3 mb-4">
-            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+            <a href="{% url "catalog:index" categories_slug.9 %}" class="card" style="width: 100%; height: 200px;">
                 <img src="{% static 'deps/images/types_of_tea/white.jpg' %}" class="card-img" alt="Белый чай" style="height: 200px; object-fit: cover;">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
                     <h5 class="card-title text-white">Белый чай</h5>
@@ -162,7 +164,7 @@
             </a>
         </div>
         <div class="col-md-3 mb-4">
-            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+            <a href="{% url "catalog:index" categories_slug.10 %}" class="card" style="width: 100%; height: 200px;">
                 <img src="{% static 'deps/images/types_of_tea/puer.jpg' %}" class="card-img" alt="Пуэр" style="height: 200px; object-fit: cover;">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
                     <h5 class="card-title text-white">Пуэр</h5>
@@ -170,7 +172,7 @@
             </a>
         </div>
         <div class="col-md-3 mb-4">
-            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+            <a href="{% url "catalog:index" categories_slug.11 %}" class="card" style="width: 100%; height: 200px;">
                 <img src="{% static 'deps/images/types_of_tea/roybush.jpg' %}" class="card-img" alt="Ройбуш" style="height: 200px; object-fit: cover;">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
                     <h5 class="card-title text-white">Ройбуш</h5>
@@ -178,7 +180,7 @@
             </a>
         </div>
         <div class="col-md-3 mb-4">
-            <a href="{% url "catalog:index" %}" class="card" style="width: 100%; height: 200px;">
+            <a href="{% url "catalog:index" categories_slug.12 %}" class="card" style="width: 100%; height: 200px;">
                 <img src="{% static 'deps/images/types_of_tea/matcha.jpg' %}" class="card-img" alt="Матча" style="height: 200px; object-fit: cover;">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
                     <h5 class="card-title text-white">Матча</h5>

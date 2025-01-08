@@ -1,18 +1,33 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from django.http import HttpResponse
 from goods.models import Products
 
 
-def catalog(request) -> HttpResponse:
-    goods = Products.objects.all()
-    paginator = Paginator(goods, 6) # Будет показывать по 6 товаров
+def catalog(request, category_slug=None) -> HttpResponse:
+
     page_number = request.GET.get('page') # Номер страницы, запрашиваемый пользователем
+    on_sale = request.GET.get('on_sale', None)
+    order_by = request.GET.get('order_by', None)
+
+    if category_slug == 'all':
+        goods = Products.objects.all()
+    else:
+        goods = get_list_or_404(Products.objects.filter(category__slug=category_slug))
+
+    if on_sale:
+        goods = goods.filter(discount__gt=0)
+    if order_by and order_by != 'default':
+        goods = goods.order_by(order_by)
+
+    paginator = Paginator(goods, 6) # Будет показывать по 6 товаров
+    
     goods_page = paginator.get_page(page_number)
     
     context: dict = {
         'title': 'Tea Shop-Каталог',
         'goods': goods_page,
+        'slug_url': category_slug,
     }
     return render(request, 'goods/catalog.html', context )
 
@@ -20,6 +35,7 @@ def catalog(request) -> HttpResponse:
 def product(request, product_slug):
     product = Products.objects.get(slug=product_slug) # создание обьекта продукта
     previous_url = request.META.get('HTTP_REFERER', '/') # создание url муршрута для перехода на прошлую страницу
+    category_slug = product.category.slug
 
     benefits = {
             5: 'Зеленый чай богат антиоксидантами, которые помогают защищать клетки от повреждений и способствуют общему здоровью. Он может улучшать обмен веществ и поддерживать сердечно-сосудистую систему, снижая риск заболеваний. Кроме того, зеленый чай способствует улучшению когнитивных функций и снижению уровня стресса благодаря сочетанию кофеина и L-теанина.',
@@ -36,7 +52,8 @@ def product(request, product_slug):
         'title': f"Товар-{product.name}",
         'previous_url': previous_url,
         'product': product,
-        'benefits': benefits[product.category_id]
+        'benefits': benefits[product.category_id],
+        'category_slug' : category_slug
     }
 
     return render(request, 'goods/product.html', context=context)

@@ -6,19 +6,21 @@
     <div class="row">
         <div class="col-md-4 mb-4">
             <div class="card" style="height: 400px;"> <!-- Задаем фиксированную высоту карточки -->
-                <a href="#">
-                    {% if product.image %}
-                        <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}" style="height: 200px; object-fit: cover;"> 
-                    {% else %}
-                        <img src="{% static "deps/images/Image-not-found.png" %}" class="card-img-top" alt="page not found" style="height: 200px; object-fit: cover;"> 
-                    {% endif %}
-                </a>
-                <div class="discount-badge position-absolute" style="top: 10px; right: 10px; background-color: black; color: white; padding: 5px; border-radius: 5px;">
-                    -{{ product.discount }}% <!-- Предполагается, что 'discount' — это атрибут вашего продукта -->
-                </div>
+
+                {% if product.image %}
+                    <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}" style="height: 200px; object-fit: cover;"> 
+                {% else %}
+                    <img src="{% static "deps/images/Image-not-found.png" %}" class="card-img-top" alt="page not found" style="height: 200px; object-fit: cover;"> 
+                {% endif %}
+
+                {% if product.discount %}
+                    <div class="discount-badge position-absolute" style="top: 10px; right: 10px; background-color: black; color: white; padding: 5px; border-radius: 5px;">
+                        -{{ product.discount }}% <!-- Предполагается, что 'discount' — это атрибут вашего продукта -->
+                    </div>
+                {% endif %}
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">
-                        <a href="{% url 'catalog:product' product.id %}">{{ product.name }}</a>
+                        {{ product.name }}
                     </h5>
                     <p class="card-text">{{ product.description }}</p>
                     <p style="color: rgb(140, 140, 140);">id: {{ product.display_id }}</p>
@@ -37,7 +39,6 @@
                             <i class="fas fa-shopping-cart"></i> <!-- Используйте Font Awesome для иконки -->
                         </a>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -45,7 +46,7 @@
         <div class="col-md-8">
             <div class="d-flex flex-column justify-content-center h-100">
                 <h5 class="card-title" style="margin-bottom: 20px;">О чае</h5>
-                <p><strong>Категория - </strong>{{product.category}}</p>
+                <p><strong>Категория - </strong><a style="color: rgb(1, 1, 153);" href="{% url "catalog:index" category_slug %}">{{product.category}}</a></p>
                 <p><strong>В наличии - </strong>{{product.quantity}}</p>
                 <p>{{benefits}}</p>
 
